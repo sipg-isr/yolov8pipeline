@@ -1,0 +1,29 @@
+stages:
+  - name: "Source"
+    host: gradioService
+    port: 8061
+    method: submit
+  - name: "yolo"
+    host: yoloService
+    port: 8061
+  - name: "yoloimg"
+    host: yoloImgService
+    port: 8061
+    method: process
+  - name: "Visualization"
+    host: gradioService
+    port: 8061
+    method: display
+links:
+  - source:
+      stage: "Source"
+    target:
+      stage: "yolo"
+  - source:
+      stage: "yolo"
+    target:
+      stage: "yoloimg"
+  - source:
+      stage: "yoloimg"
+    target:
+      stage: "Visualization"
