@@ -4,3 +4,6 @@
 [submodule "Gradio_GRPC"]
 	path = Gradio_GRPC
 	url = https://github.com/Toast5286/Gradio_GRPC.git
+[submodule "Yolo_Img_grpc"]
+	path = Yolo_Img_grpc
+	url = https://github.com/Toast5286/Yolo_Img_grpc.git
